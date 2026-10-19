@@ -1,66 +1,127 @@
-
 # FraudShield AI 🛡️
+### AI-Powered Credit Card Fraud Detection Dashboard
 
-### Credit Card Fraud Detection Using Machine Learning
+FraudShield AI is a machine-learning project designed to explore how artificial intelligence can help identify potentially fraudulent credit card transactions. Built with Python, Scikit-learn, and Streamlit, it provides an interactive dashboard for exploring transaction data, examining fraud patterns, evaluating a machine-learning model, and testing sample transactions.
 
-FraudShield AI is an educational financial cybersecurity project that uses machine learning to identify potentially fraudulent credit card transactions. It provides an interactive Streamlit dashboard for dataset exploration, model evaluation, fraud probability analysis, and prediction review.
+## 🚀 Live Demo
 
-## Features
+**[Launch FraudShield AI — Streamlit App](https://fraudshield-ai1.streamlit.app/)**
 
-- Credit card transaction dataset analysis
-- Random Forest classification
-- Class imbalance handling with class-weighted learning
-- Precision, recall, F1-score, ROC-AUC, and PR-AUC
-- Confusion matrix and feature importance visualizations
-- Adjustable fraud classification threshold
-- Test-set prediction explorer and CSV export
-- Synthetic demo mode for testing the interface
+Open the live application to explore the dashboard and its available features.
 
-## Technology Stack
+## ✨ Features
 
-- Python
-- Pandas and NumPy
-- Scikit-learn
-- Streamlit
-- Plotly
+- **Interactive dashboard:** View transaction statistics and fraud-related insights.
+- **Dataset exploration:** Examine transaction records and the distribution of legitimate and fraudulent transactions.
+- **Machine-learning classification:** Use a Random Forest classifier to classify transactions as potentially legitimate or fraudulent.
+- **Model evaluation:** Review performance metrics, including accuracy, precision, recall, F1-score, and a confusion matrix.
+- **Data visualizations:** Explore interactive charts to understand transaction patterns.
+- **Sample transaction testing:** Test the prediction workflow using sample transaction data.
+- **Data validation:** Check uploaded data for required columns and handle basic data-cleaning tasks.
 
-## Dataset
+## 🧠 How It Works
 
-The project supports the public Kaggle Credit Card Fraud Detection dataset.
+1. **Load transaction data:** The application loads the credit card transaction dataset or uses demonstration data when appropriate.
+2. **Prepare the data:** It validates the data and separates the input features from the target label.
+3. **Train the model:** A Random Forest classifier learns patterns from the training data.
+4. **Evaluate performance:** The model is evaluated on held-out test data using classification metrics.
+5. **Explore predictions:** Users can examine transaction patterns and test the prediction workflow through the dashboard.
 
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+## 📊 Dataset
 
-Download `creditcard.csv` separately. Do not commit the dataset to GitHub.
+This project uses the publicly available **Credit Card Fraud Detection** dataset from Kaggle.
 
-## Run Locally
+- **Dataset:** [Credit Card Fraud Detection — Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **Total transactions:** 284,807
+- **Legitimate transactions:** 284,315
+- **Fraudulent transactions:** 492
+- **Features:** 30 columns, including `Time`, `Amount`, anonymized features `V1`–`V28`, and the target label `Class`.
+
+The dataset is highly imbalanced, with fraudulent transactions representing approximately 0.173% of all records. This makes precision, recall, and F1-score important when evaluating the model, rather than relying on accuracy alone.
+
+**Dataset note:** The original CSV is not included in this repository because of its large file size. Download it from Kaggle and place `creditcard.csv` in the project folder if you want to run the application with the full dataset.
+
+## 🛠️ Technologies Used
+
+- **Python** — application logic and data processing
+- **Streamlit** — interactive web application
+- **Pandas** — data manipulation
+- **NumPy** — numerical operations
+- **Scikit-learn** — machine learning and evaluation metrics
+- **Plotly** — interactive visualizations
+- **Git and GitHub** — version control and project hosting
+
+## 💻 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ab9eha/FraudShield-AI.git
+cd FraudShield-AI
+```
+
+
+### 2. Install dependencies
 
 ```bash
 python -m pip install -r requirements.txt
+```
+
+### 3. Add the dataset
+
+Download the Kaggle dataset and place the extracted `creditcard.csv` file in the project folder, alongside `app.py`.
+
+If the dataset is unavailable, the application may use its built-in demonstration data, depending on the application's configured fallback behavior.
+
+### 4. Start the application
+
+```bash
 python -m streamlit run app.py
 ```
 
-## Methodology
+Streamlit will display a local URL in the terminal. Open that URL in your browser.
 
-1. Validate and preprocess transaction data.
-2. Separate features from the `Class` target.
-3. Split data into stratified training and test sets.
-4. Train a Random Forest classifier using class weighting.
-5. Evaluate performance with metrics suited to rare fraud events.
-6. Visualize predictions and feature importance.
+## 📁 Project Structure
 
-## Limitations
+```text
+FraudShield-AI/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── creditcard.csv  # Download separately; not committed
+```
 
-This is an educational prototype, not a production banking system. Results depend on the dataset, split, threshold, and model settings. The synthetic demo is not evidence of real-world performance. Deployment would require additional validation, monitoring, security controls, and privacy safeguards.
+## 🎯 Project Goals
 
-## Author
+The goals of FraudShield AI are to:
 
-**Abeeha Zeeshan**  
-Student Researcher | AI & Cybersecurity
+- Explore the application of machine learning to financial fraud detection.
+- Understand the challenges of highly imbalanced datasets.
+- Practice data processing, model training, and evaluation.
+- Build an interactive dashboard that communicates machine-learning results.
+- Demonstrate an end-to-end AI project, from data preparation to web deployment.
 
-## Live Demo
+## ⚠️ Limitations and Responsible Use
 
-Add the Streamlit deployment URL here after deployment.
+FraudShield AI is an educational and portfolio project. Its predictions should not be treated as confirmed fraud findings or used to make real financial decisions.
 
-## License and Data Attribution
+Model performance depends on the dataset, training process, and selected features. Results from this project do not establish effectiveness against real-world fraud. The application is not a production banking security system and should not be used to approve or decline actual transactions.
 
-Check the dataset's current license and terms before redistributing data or publishing derived artifacts.
+## 👩‍💻 Author
+
+**Abeeha Zeeshan**
+
+Student developer interested in Artificial Intelligence, Cybersecurity, and machine-learning applications.
+
+## 📌 Project Status
+
+The application has been deployed on Streamlit and is available for demonstration.
+
+**Live application:** [https://fraudshield-ai1.streamlit.app/](https://fraudshield-ai1.streamlit.app/)
+
+**GitHub repository:** Add your repository URL here once your repository is available.
+
+---
+
+*Built as an educational AI and financial cybersecurity project.*
