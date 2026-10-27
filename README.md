@@ -120,8 +120,4 @@ The application has been deployed on Streamlit and is available for demonstratio
 
 **Live application:** [https://fraudshield-ai1.streamlit.app/](https://fraudshield-ai1.streamlit.app/)
 
-**GitHub repository:** Add your repository URL here once your repository is available.
-
----
-
 *Built as an educational AI and financial cybersecurity project.*
